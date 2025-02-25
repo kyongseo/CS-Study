@@ -4,7 +4,9 @@ Cannot invoke "java.io.File.getPath()" because the return value of "org.gradle.t
 ```
 
 - 오류 해결
-  - wsl 환경에서 java Home 경로 지정
+  - wsl 환경에서 올바른 gradle 경로 지정
+  - Setting 설정 -> 사진 참고
+  ![img.png](img.png)
  
     
 1. 먼저 JDK 위치 확인 </br>
