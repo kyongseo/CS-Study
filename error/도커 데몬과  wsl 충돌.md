@@ -6,6 +6,42 @@
 - 인텔리제이에서 DB 연동 시 도커에서 띄운 PostgreSQL이 아닌 WSL 환경에서 띄운 PostgreSQL 이랑 연동이 되버림
 
 ### 🔍 해결 
+1. docker
+```dotenv
+# 상태 확인
+systemctl status docker
+
+# 중지
+sudo systemctl stop docker
+
+# 부팅 시 자동 실행 방지
+sudo systemctl disable docker
+```
+2. redis
+```dotenv
+# 상태 확인
+systemctl status redis
+
+# 중지
+sudo systemctl stop redis
+
+# 부팅 시 자동 실행 방지
+sudo systemctl disable redis
+```
+3. mongodb
+```dotenv
+# 상태 확인
+systemctl status mongod
+
+# 중지
+sudo systemctl stop mongod
+
+# 부팅 시 자동 실행 방지
+sudo systemctl disable mongod
+```
+
+---
+
 1. `systemctl status postgresql.service` 결과를 보면 WSL 내부에서 PostgreSQL 서비스가 실행되고 있었음
     - 세번째 `Active: active (exited) since Fri 2025-02-14 09:01:18 KST; 6h ago` 실행 중임을 확인 가능
 ```dotenv
