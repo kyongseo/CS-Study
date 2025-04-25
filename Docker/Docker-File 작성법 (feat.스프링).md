@@ -9,12 +9,7 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 ```
 - 링크 : https://spring.io/guides/gs/spring-boot-docker/
 
-위의 Dockerfile을 스프링 부트의 기본 디렉토리에 저장한 후 Maven 의 경우
-
-``` docker build -t springio/gs-spring-boot-docker ```
-명령어를 입력하고, 
-
-Gradle의 경우
+- Gradle의 경우
 
 ``` $ docker build --build-args JAR_FILE=build/libs/*.jar -t springio/gs-spring-boot-docker . ```
 명령어를 입력하여 도커 이미지를 빌드한다.
