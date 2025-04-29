@@ -7,14 +7,14 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 ```
-- 링크 : https://spring.io/guides/gs/spring-boot-docker/
+  - 링크 : https://spring.io/guides/gs/spring-boot-docker/
 
 - Gradle의 경우
 
 ``` $ docker build --build-args JAR_FILE=build/libs/*.jar -t springio/gs-spring-boot-docker . ```
-명령어를 입력하여 도커 이미지를 빌드한다.
+  - 명령어를 입력하여 도커 이미지를 빌드한다.
 
-그럼 도커파일이 뭔지 자세하게 뜯어보자.
+- 그럼 도커 파일이 뭔지 자세하게 뜯어보자.
 
 ## Dockerfile
 ### Dockerfile 이란?
@@ -36,6 +36,8 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 ```
+
+---
 
 - 스프링 부트 가이드에 기본적으로 도커파일 명령어들이 있고 하나하나 살펴보자.
 
