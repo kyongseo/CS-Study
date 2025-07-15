@@ -6,7 +6,7 @@
     GH001: Large files detected.
     ```
 - 원인
-  - `gradle-8.12.1-bin.zip.1` 파일이 Git history 상에 존재하며 100MB 이상이기 때문에 GitHub에서 push를 거부함
+  - `gradle-8.12.1-bin.zip.1` 파일이 Git history 상에 존재하며 commit 용량이 100MB 이상이기 때문에 GitHub에서 push를 거부함
 
 ### ✅ 해결 과정
 #### 1. 해당 zip 파일 Git 기록에서 완전 삭제
